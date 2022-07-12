@@ -1,7 +1,8 @@
+// program to print hello on the screen
 #include<stdio.h>
 int main()
 {
-    /* In this program I have printed "hello" in the first line and "world" in the second line */
-     printf("Hello\nWorld");
-  return 0;
+
+    printf("Hello");
+    return 0;
 }

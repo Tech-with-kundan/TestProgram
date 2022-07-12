@@ -1,7 +1,6 @@
+// program to print hello in the first line and world in the second line .
 #include<stdio.h>
-int main()
-{
-    /* In this program I have printed "hello" in the first line and "world" in the second line */
-     printf("\"MySirG\"");
-  return 0;
+int main(){
+    printf("Hello \n World ");
+return 0;
 }
