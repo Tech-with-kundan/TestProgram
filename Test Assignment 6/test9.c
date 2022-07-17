@@ -9,7 +9,8 @@ int main(void){
     for(int i=2; i<min; )
     {
         if(n1%i==0 && n2%i==0)
-        {
+        {    
+             min/=i;
              n1/=i;
              n2/=i;
              ans*=i;
