@@ -1,8 +1,7 @@
-// Heapify  and also we will see the heap sort . 
+// Heapify algoritham and Also we will see the heap  sort . 
 // Let's talk about the time complexity of heap sort 
 // is Big 0 ( nlogn) which is best time complexity . 
-// In this track we will have  to solve the common problems
-// of  Heap sort which is sometimes bacomes so complex . 
+// In this  program we 'll learn how we  can implement the heapify algorigtham in order to make an array sort  . And also we 'll see how to work Heap sort . 
  #include<iostream>
  using namespace std; 
 // this is set_root function is arranging the root larger as we know that in Max heap  root 's value greater than its desendents  .
