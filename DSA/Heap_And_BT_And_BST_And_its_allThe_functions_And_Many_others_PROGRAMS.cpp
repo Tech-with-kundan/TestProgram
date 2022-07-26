@@ -248,25 +248,26 @@
                                    *r=n;
                                    return ;
                                }
+                               Tree * p= *r; 
                               
                                   while(true){
-                                     if((*r)->val>data){
+                                     if(p->val>data){
                                          if((*r)->right==NULL){
-                                             (*r)->right=n;
+                                             p->right=n;
                                              break;
                                          }
                                          else
-                                            *r= (*r)->right; 
+                                            p= p->right; 
                                      }
                                      else
                                      {
-                                      if((*r)->left==NULL)
+                                      if(p->left==NULL)
                                          {
-                                          (*r)->left=n;
+                                          p->left=n;
                                           break;
                                          }
                                          else
-                                         *r= (*r)->left; 
+                                         p= p->left; 
                                      }
                                   }
                            }
