@@ -1,10 +1,12 @@
 /*
-  write a program  to print next previous element of the an array .
+  In this file is contains many programs , like Heap implementation , and BT and BST ans all its functions are Implemented like inorder , level order , preorder
+  postorder  etc  .
   */ 
 
 
  #include<bits/stdc++.h>
    using namespace std ; 
+// this next_previous is printing the next previous element of that value .
        vector<int> next_previous(vector<int> arr){
 
 //vector<int> nextSmaller(vector<int> arr) {
@@ -31,7 +33,7 @@
     }
     return ans;
        }
-
+// this is making the ineger by using bits . this question is on leetcode .
      int max_bits_to_makeinterger(int n){
          // this is dynamically programming .
         pair<int, int> p; 
@@ -46,6 +48,7 @@
 
 
      }
+// trippplets function is printing the all the tripplet whose sum is zero .
       vector<vector<int>> tripplets(vector<int>nums, int tar){
            vector<vector<int>> ans;
             sort(nums.begin(), nums.end());
@@ -79,6 +82,7 @@
 
             return ans ;
       }
+// this function is  printing all the combination of letter   as we  see on the telephone keypad .
        vector<string> letter_of_combination(string digits){
            // test case : 21
            vector<string>ans ;
@@ -108,6 +112,7 @@
 
 
        }
+// this function generating the parenthesis with N pair like if n is 3 so the output should be ((()))) thsi is the one example .
        void generates_N_parenthesis(string help, vector<string>& ans, int i, int j){
            // binary  recrustion
            if(i>j or i<0 or j<0 )
@@ -128,8 +133,8 @@
        }
 
                
-              // return Ans; 
-               // let's create the BT (Binary Tree)
+            
+               // let's creation  the BT (Binary Tree)
                  class Tree {
                      public :
                      Tree * left; 
@@ -146,6 +151,7 @@
                    }
 
                  } ;
+                 // levele ordering traversal 
                   void LevelOrderalTraversing(Tree * root){
                    queue<Tree *> q; 
                    q.push(root);
@@ -222,16 +228,7 @@
 
                    }
                   void  BuilTreeFor_BST(Tree ** root){
-                    // this **root itself is the root which I have created it inside the main function()
-                    // but I am suprised that how come  this can be possible . 
-                    // Look  here inside the while  I have written one line for showing the result 
-                    // of root node , but it showing me   only root node's data . That's why I am wondering  
-                    // that how can it be possible . 
-                    // every time I am calling Insert the function which is arranging the nodes in such  way 
-                    // that  left node tree  shold be smaller than it root and  right node tree should be greater
-                    // than it root , that is the property of BST . And not only this it is also returning the node's address
-                    // which it has arranged in the tree . 
-                    // The address is storing into the root varaible which is being sent by Insert () function . 
+                    
                        int data; 
                        cout<<"Enter the data"<< endl;
                         cin>> data; 
@@ -240,8 +237,6 @@
                          while(data!=-1){
                              
                             *root=Insert(*root, data);
-                             // When it  is all the time showing me the same value , so why not to print it address
-                            // printf("%u", root); 
                            
                             cin>> data; 
                          }
@@ -356,6 +351,8 @@ implementation is done in the form of an array .
 
          */
 
+// It's creation of Heap data structure .
+
          class Heap{
           private :
          int  idx=0; 
@@ -372,6 +369,7 @@ implementation is done in the form of an array .
             ~Heap(){
               delete arr; 
             }
+           // Here we have built the Min Heap  . 
              void Build_MINHeap(int val){
                idx++;
                
@@ -448,7 +446,7 @@ implementation is done in the form of an array .
               }
               
 
-
+//  Here we have printed the  element of MIN heap 
               void PrintMIN_Heap(){
                  if(idx==0)
                       {
@@ -464,7 +462,7 @@ implementation is done in the form of an array .
 
 
          };
-            
+            // this  main (_)  . 
        int main(void){
 
 
@@ -586,7 +584,7 @@ implementation is done in the form of an array .
                 //    postorder(root);
                 //    cout<< endl;
                 //    cout<<"Level Wist traversal"<< endl;
-
+ // If want to check these all this function 's working just uncommment these all the lines and run on your IDE and check it .
 
 
 
