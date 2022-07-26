@@ -22,10 +22,10 @@
             }
     
    }
+// this is the Itarative solution of the Max Heap  . 
  void heapify(int arr[], int index, int size){
      int lowerindex=index; 
       while(index<size){
-
 
         int left= 2*index+1;
           int right= 2*index+2; 
