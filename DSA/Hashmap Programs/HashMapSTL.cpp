@@ -1,6 +1,6 @@
 /* 
- Today We will  learn about how Hashmap works , and 
- what kind of functions are given in our  STL . 
+ Today We will  learn about how Hashmap works  , and 
+ what kind of functions are given in  hashmap of our  STL  . 
  Hashmap is very Important data structure . 
  And also we will see the  several functions of STL . 
   insert() it required the two argument . the key and data . 
@@ -12,10 +12,8 @@
   begin() for  getting the first iterator of  key . 
   end()  for getting  the last iterator of key . 
   at()  this at function gives us key of value  where  it is inserted . 
-
-
-
- 
+   
+  Note:-   when we insert data into  map it stores in assending order and once we  insert data into unordered_map it inserts randombly . 
  */ 
  #include<map>
  #include<unordered_map>
@@ -90,8 +88,6 @@
          }
 
          // we other uption to print the data of map which for each loop . 
-
-
          // let's see it 
          cout<< endl;
          for(auto i: M){
