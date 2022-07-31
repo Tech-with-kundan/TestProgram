@@ -19,25 +19,25 @@ using namespace std;
          int j=0;
          vector<int> ans; 
           while(i<n &&  j<  m){
-                 if(arr1[i]> arr2[j]){
+                 if(arr1[i]> arr2[j]){  // if we find any less value in any array then we will add that element in our vector answer . And also we will increse the index of the array . 
                        ans.push_back(arr2[j]);
                        j++;
                  }
-                  else if(arr1[i]== arr2[j]){
+                  else if(arr1[i]== arr2[j]){  //if we find  the value in any array  is equal to   both array then we will add that element in our vector answer . And also we will increse the index of the  both array . 
                         ans.push_back(arr1[i]);
                         i++;
                         j++;
                   }
-                  else{
+                  else{  //if we find any less value in any array then we will add that element in our vector answer . And also we will increse the index of the array . 
                        ans.push_back(arr1[i]);
                        i++;
                   }
           }
-           while(i<n){
+           while(i<n){  // Here whatever the element reside in the array simply we will copy  that in the our vector answer . 
                  ans.push_back(arr1[i]);
                        i++;
            }
-             while(j<m){
+             while(j<m){  // Here whatever the element reside in the array simply we will copy  that in the our vector answer . 
                   ans.push_back(arr2[j]);
                        j++;
              }
