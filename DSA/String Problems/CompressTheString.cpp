@@ -28,14 +28,17 @@ string compressTheString(string &s)
           if(ch==s[i]){  // we will campare with  next  to each character if it is equal then we  will add the data into  the vector . 
                 b.push_back(s[i]);
           }
-          else  // Here When it will  be false then  first of all   we will find the size of vector if it greater than one that means we will add it character in our answer and also  the size of vector and after that we clear all the data of vector . 
+          else  // Here When it will  be false then  first of all   we will find the size of vector if it greater than one 
+		  //that means we will add it character in our answer and also  the size of vector and after that we clear all the data of vector . 
           {  
               if(b.size()!=1 &&  b.size()!=0){
              ans.push_back(ch);
              char d= '0'+ b.size();
              int  num= d-'0'; 
-              if(num>=9) // Here I have mentioned this condition why because if size of vector might greter than 9 in that condition we will take one string and the we will convert the number into string and then we will add into our answer vector . 
-              {
+              if(num>=9) // Here I have mentioned this condition why because ,
+	      {      //if size of vector might greter than 9 in that condition we will take one string and the we will convert the number into string 
+		      //and then we will add into our answer vector . 
+              
                 string temp= to_string(num);
                 
                 for(int i=0; i< temp.size(); i++){
@@ -62,9 +65,10 @@ string compressTheString(string &s)
       
       }
         if(b.empty()==false)  // after the  ending the loop we will again check if vector is empty if it empty then we will nothiing do 
-        // if it is not empty then we will find the  size of vector and then also  check  it is smaller than 10 in that case we will add size of vector in our answer string  . 
-        // if the size of vector is greater than 9 in that case we will take one string and  convert the size into  string and then we will add in our answer strign that's all . 
-          {
+	{ // if it is not empty then we will find the  size of vector and then also  check  it is smaller than 10 in that case we will add size of vector in our answer string  . 
+           // if the size of vector is greater than 9 in that case we will take one string and  convert the size into  string and then we will add 
+		//in our answer strign that's all . 
+          
             char d= '0'+ b.size();
               int num= d-'0'; 
               if(num==1)
@@ -99,11 +103,11 @@ string compressTheString(string &s)
 int main(){
    string ans;
     char  data ='0'+ 3 ;
-    string b="vvaaaaaaaaaaacccxxxxxvvvvddddd";
+    string b="vvaaaaaaaaaaacccxxxxxvvvvddddd";  // this is only for  checking purpose . 
     
       ans=  compressTheString(b);
    
-     for(auto i : ans)
+     for(auto i : ans) // for each loop  for print the anwser . 
        cout<< i; 
 
     return 0; 
