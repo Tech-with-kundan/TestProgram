@@ -1,6 +1,6 @@
 /* Let's talk about a very  interesting question based on string . In this question   you will be given
    a string size of 1 to 500 . You have to tell the  each and every particular character how many times
-   present in the string . 
+   occur  in the string . 
    For better understanding , Let's see the Test cases  :- 
    
      I/P:- string ans="vvvyyyyyyvvvvvvrryyyyyyuuuuuccccccrrrrr";
