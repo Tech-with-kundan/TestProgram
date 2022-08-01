@@ -1,7 +1,7 @@
 //9. Write a program in C to accept a matrix and determine whether it is a sparse matrix.
 /*
 What is sparse matrix with example?
-Image result for what is property of sparse matrix
+
 The matrix which has a greater number of zero values in comparison to
 the non-zero values is known as a sparse matrix.
 */
