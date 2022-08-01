@@ -49,7 +49,7 @@ the non-zero values is known as a sparse matrix.
                 printf(" Yes it is Sparse matrix ");
              }
              else {
-               printf(" No  it is  Dense matrix ");
+               printf(" it is  Dense matrix  ");
              }
              return 0;
    }
