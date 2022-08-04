@@ -50,9 +50,10 @@ class Solution{
                     return true; 
                }
         //Your code here
+      // The logic of this  question is very simple we have to follow just some step . 
         // we will split the linked list into two part the we will check each and every node is it equal
         // if we will found the both nodes are equal to each other then we will go to the next pointer . 
-        // and at  the end we will return the yes . 
+        // and at  the end we will return the true  or false  . 
         // First off the we will find the length of linked list . 
          int length= Getlength(head);
          
@@ -73,7 +74,7 @@ class Solution{
              temp=  slow->next;
            else
             temp=slow; 
-          // this code for reversing the half of linked list .  after reversing we will check  through each  and every node
+          // this code for reversing the half of linked list .  after reversing we will check  through each  and every nodes are equal to each other or not . 
            
            Node * curr= temp; 
            Node * prev=NULL; 
