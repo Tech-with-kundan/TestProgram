@@ -1,10 +1,10 @@
 /*
   ******************************************GRAPH*****************************************
-   Graph is such important data structure , why because in the real life we use variety of applications
-   of graph just like , social media, Gooogle map , Computer networks etc . 
+   Graph is such important data structure , why important  because in the real life we often  use varietes of applications
+   based on  graph data strcture  just like :-  social media, Gooogle map , Computer networks , job scheduling and job scheduling  etc . 
    Whata is Graph ?
    The straightforward definition of Graph is combination of nodes and edges  . 
-   In the  techincal term , A node of graph of graph can be point to anyone to anyone nodes . 
+   In the  technical term , The nodes  of graph  can be point to anyone to anyone nodes . That's why it 's representation looks like graph .  
 
    How to implement Graph ?
    We have two maqanisam to implement graph which is :-
