@@ -1,3 +1,4 @@
+// Write a program to  implement circular dynamic queue array based ..........
 #include<iostream>
 using  namespace std;
 template <typename  T >
@@ -12,6 +13,7 @@ class Queue {
  Queue (int capacity){
     front=rear=-1;
     size=0;
+    this->capacity= capacity;
    arr=new T[capacity];
  }
  // to get size of queue that how many elements  have stored in it.
@@ -28,8 +30,9 @@ class Queue {
  }
  // dynamic queue ( to create double size of queue  )
  void doublesize(){
+     capacity*=2;
 
-  T * temp = new T [capacity*2] ;
+  T * temp = new T [capacity] ;
   if ( rear > front ){
     for ( int i=front; i<rear+1; i++)
         temp[i]= arr[i] ;
@@ -41,24 +44,37 @@ class Queue {
   delete arr;
   arr=temp ;
  }
+
+ void halfSize(){
+ int t= capacity ;
+  capacity/=2;
+  T * temp= new T [capacity];
+  if ( rear > front){
+    for( int i=front; i<= rear; i++){
+        temp[i%capacity]= arr[i%t] ;
+    }
+  }
+  else {
+    for ( int i=rear;i<=front ; i++){
+        temp[i%capacity]= arr[i%t];
+    }
+  }
+  delete arr;
+  arr=temp;
+  front= front % capacity ;
+  rear = rear % capacity ;
+ }
 // checking if queue has become full or not.
  bool isfull(){
  return size==capacity;
  }
 // to get front data of queue.
  T frontData(){
-    if ( size==0 ) {
-        cout<<"Queue is empty " ;
-        return 0;
-    }
+
     return arr[front];
  }
 // To  get rear data from queue.
  T RearData(){
-    if ( size == 0 ){
-        cout<<" Queue is empty " ;
-        return ;
-    }
 
     return arr[rear] ;
  }
@@ -70,7 +86,7 @@ class Queue {
        doublesize();
 
       }
-      else {
+
         rear= (rear+1) % capacity ;
         arr[rear]= val;
         if (front==-1){
@@ -78,7 +94,7 @@ class Queue {
         }
         size+=1;
 
-      }
+
 
  }
 // Deleting element from the queue....
@@ -96,6 +112,9 @@ class Queue {
         size-=1;
     }
 
+    if ( size == capacity/2)
+         halfSize();
+
  }
 
  ~ Queue(){
@@ -110,25 +129,26 @@ int main(){
      q.Enqueue(12);
      q.Enqueue(13);
      q.Enqueue(14);
+     q.Enqueue(15);
      q.dequeue();
-     q.Enqueue(20);
-     q.Enqueue(21);
-     q.Enqueue(22);
-     q.dequeue();
-     q.dequeue();
-     q.dequeue();
-     q.dequeue();
-     q.Enqueue(25);
-     q.Enqueue(26);
 
-       while ( ! q.empty()){
+     q.dequeue();
+
+
+     int s= q.getsize();
+
+       while (s){
          cout<< q.frontData()<< endl;
          q.dequeue();
+         s=q.getsize();
 
      }
 
      return 0;
 }
 
+----------------------------------------Output ----------------------------------------------------
+    14 
+    15
 
 
